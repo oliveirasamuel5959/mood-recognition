@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import SignupForm
+from .models import User
 
 # Create your views here.
 def index(request):
@@ -15,6 +16,7 @@ def signup(request):
         form = SignupForm(request.POST)
         
         if form.is_valid():
+            form.save()
             print('valid')
             return redirect('/login/')
         

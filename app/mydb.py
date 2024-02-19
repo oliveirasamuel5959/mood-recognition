@@ -8,7 +8,7 @@ dataBase = mysql.connector.connect(
 
 cursor = dataBase.cursor()
 
-cursor.execute('CREATE DATABASE recognition')
+cursor.execute('CREATE DATABASE IF NOT EXISTS recognition')
 
 print('All Done!')
 
