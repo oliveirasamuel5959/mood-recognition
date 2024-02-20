@@ -63,7 +63,7 @@ def user_login(request):
             if user:
                 login(request, user)
                 messages.success(request, 'Logged in successfully!')
-                return redirect('/')
+                return redirect('/main/')
     else:
         form = LoginForm()
     return render(request, 'core/login.html', {

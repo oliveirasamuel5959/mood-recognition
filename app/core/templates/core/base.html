@@ -16,7 +16,7 @@
 
     <body>
         <nav class="py-6 px-6 flex justify-between items-center border-b border-gray-200">
-            <a href="/" class="text-xl font-semibold">Recognition</a>
+            <a href="#" class="text-xl font-semibold">Recognition</a>
 
             {% if messages %}
                 {% for message in messages %}
@@ -35,7 +35,7 @@
                 <a href="#" class="text-lg font-semibold hover:text-gray-500">Browse</a>
 
                 {% if user.is_authenticated %}
-                    <a href="{% url 'core:logout' %}" class="px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Log out</a>
+                    <a href="{% url 'core:logout' %}" class="px-6 py-3 text-lg font-semibold bg-gray-500 text-white rounded-xl hover:bg-gray-700">Log out</a>
                 {% else %}
                     <a href="{% url 'core:signup' %}" class="px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Sign up</a>
                     <a href="{% url 'core:login' %}" class="px-6 py-3 text-lg font-semibold bg-gray-500 text-white rounded-xl hover:bg-gray-700">Log in</a>
