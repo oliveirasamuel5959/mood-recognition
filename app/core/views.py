@@ -4,22 +4,24 @@ from django.contrib.auth.forms import AuthenticationForm, \
 PasswordChangeForm, SetPasswordForm, UserChangeForm
 from django.contrib.auth import authenticate, login, logout, \
 update_session_auth_hash
+#from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
 from .forms import SignupForm, LoginForm
 from .models import Users
 
 
+
 def insert_user(userData):
     name = userData['username']
     email = userData['email']
-    password = userData['password1']
-    user = Users(username=name, email=email, password=password)
+    hashed_password = userData['password1']
+    print(hashed_password)
+    user = Users(username=name, email=email, password=hashed_password)
     user.save()
     
 def check_user(userData):
     print(userData['username'])
     print(userData['password'])
-
 
 
 
@@ -38,7 +40,7 @@ def user_signup(request):
         
         if form.is_valid():
             messages.success(request, 'Account created successfully!')
-            form.save()
+            #form.save()
             insert_user(form.cleaned_data)
             return redirect('/login/')
     else:
