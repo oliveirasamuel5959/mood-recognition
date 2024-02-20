@@ -6,7 +6,7 @@
     <div class="w-1/2 my-6 mx-auto p-6 bg-gray-100 rounded-xl">
         <h1 class="mv-6 text-3xl">Sign up</h1>
 
-        <form method="post" action="." novalidate class="needs-validation">
+        <form method="post" action=".">
             {% csrf_token %}
 
                 <div class="mb-3">
@@ -41,7 +41,6 @@
                 {% endif %}
 
                 <button class="py-4 px-8 mt-5 text-lg bg-teal-500 hover:bg-teal-700 rounded-xl text-white">Submit</button>
-
         </form>
     </div>
 {% endblock %}

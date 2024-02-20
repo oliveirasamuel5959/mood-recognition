@@ -1,0 +1,9 @@
+## https://github.com/oliveirasamuel5959/mood-recognition.
+
+## error: failed to push some refs to
+This error occurs when you attempt to push your local changes
+to the remote repo without updating your local repo with new changes made
+to remote repo
+
+git pull --rebase origin <branch name>
+git push -u origin <branch name>
