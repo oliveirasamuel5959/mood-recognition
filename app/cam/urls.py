@@ -9,4 +9,4 @@ app_name = 'cam'
 
 urlpatterns = [
     path('main', views.main_view, name='main'),
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]

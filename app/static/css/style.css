@@ -1,0 +1,19 @@
+#videoElement {
+    width: 720px;
+    height: 480px;
+    background-color: #666;
+}
+
+#cam_container {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 5px;
+}
+
+#cam_h1 {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 25px;
+    color: #333;
+}

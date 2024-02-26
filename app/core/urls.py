@@ -6,6 +6,7 @@ from django.conf.urls.static import static
 from . import views
 from .forms import LoginForm
 from cam.views import main_view
+
 app_name = 'core'
 
 urlpatterns = [
@@ -14,6 +15,6 @@ urlpatterns = [
     path('signup/', views.user_signup, name='signup'),
     path('login/', views.user_login, name='login'),
     path('logout/', views.user_logout, name='logout'),
-    path('main/', main_view, name='main')
+    path('main/', main_view, name='main_view')
     #path('login/', auth_views.LoginView.as_view(template_name='core/login.html'), name='login')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
